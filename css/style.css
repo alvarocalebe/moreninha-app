@@ -1,0 +1,224 @@
+*{
+  font-family: "Literata", serif;
+}
+
+header {
+    background-color: #AC652D;
+    color: white;
+    padding: 10px 0;
+    position: fixed;  /* Fixa o header no topo da página */
+    top: 0;           /* Coloca no topo da tela */
+    left: 0;
+    width: 100%;      /* Ocupa toda a largura da tela */
+    z-index: 1000;    /* Garante que o header fique por cima de outros elementos */
+}
+
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    margin: 0;  /* Remove margens */
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+
+/* Estilo do título */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+/* Estilo do formulário e dos inputs */
+#loginForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-container {
+    margin-bottom: 15px;
+}
+
+input[type="text"], input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  color: black; /* Texto preto ao digitar */
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+  border-color: #AC652D;
+  outline: none;
+}
+
+/* Estilo do botão */
+.btn-submit {
+    background-color: #AC652D;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #AC652D;
+}
+
+
+footer {
+    background-color: #AC652D;
+    color: white;
+    padding: 10px 0;
+    position: fixed;  /* Fixa o footer na parte inferior */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 1000;
+}
+
+
+footer a {
+  text-decoration: none; /* Remove o sublinhado */
+  color: inherit;        /* Herda a cor do texto ao redor (o mesmo que o texto normal) */
+}
+
+footer a:hover {
+  text-decoration: underline; /* Opcional: Adiciona o sublinhado ao passar o mouse */
+}
+
+/* Estilos gerais */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* Centraliza o conteúdo */
+  align-items: center;     /* Centraliza verticalmente */
+  height: 100vh;
+  background-color: #E3BD84;
+}
+
+.container {
+  width: 100%;
+  max-width: 350px; /* Largura máxima da tabela (ajustável conforme necessidade) */
+}
+
+/* Estilo do Carrossel */
+.polaroid-carousel {
+  position: relative;
+  width: 100%;
+  max-width: 350px;  /* Ajuste a largura para um tamanho bom para dispositivos móveis */
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carousel-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  flex: 0 0 100%; /* Cada item ocupa 100% da largura do carrossel */
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilo Polaroid */
+.polaroid {
+  position: relative;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.polaroid img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.caption {
+  margin-top: 10px;
+}
+
+.description {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.date {
+  font-size: 12px;
+  color: #666;
+}
+
+/* Esconde os inputs de tipo rádio */
+input[type="radio"] {
+  display: none;
+}
+
+/* Quando o radio button é selecionado, faz a transição */
+#slide1:checked ~ .carousel-container {
+  transform: translateX(0%);
+}
+
+#slide2:checked ~ .carousel-container {
+  transform: translateX(-100%);
+}
+
+#slide3:checked ~ .carousel-container {
+  transform: translateX(-200%);
+}
+
+/* Indicadores de navegação */
+.carousel-indicators {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.carousel-indicators label {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #ccc;
+  cursor: pointer;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container {
+      max-width: 90%;  /* Ajusta a largura para 90% da tela em dispositivos móveis */
+  }
+
+  .polaroid p {
+      font-size: 20px; /* Ajusta o tamanho da fonte nas telas menores */
+  }
+}
