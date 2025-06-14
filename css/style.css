@@ -134,6 +134,7 @@ body {
   width: 100%;
   max-width: 350px; /* Largura máxima do container (ajustável conforme necessidade) */
   margin: 0 auto;
+  margin-bottom: 10px;
 }
 
 /* Estilo do Carrossel */
@@ -157,7 +158,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-start; /* Alinha o conteúdo ao topo */
-  height: 500px; /* Altura maior para permitir mais espaço para descrições */
+  height: 510px; /* Altura maior para permitir mais espaço para descrições */
 }
 
 /* Estilo Polaroid */
@@ -184,7 +185,7 @@ body {
 }
 
 .caption {
-  margin-top: 10px; /* Espaçamento entre a imagem e o texto */
+  margin-top: 0; /* Espaçamento entre a imagem e o texto */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -201,7 +202,6 @@ body {
 .date {
   font-size: 14px;
   color: #666;
-  margin-bottom: 10px;
 }
 
 /* Esconde os inputs de tipo rádio */
@@ -220,6 +220,18 @@ input[type="radio"] {
 
 #slide3:checked ~ .carousel-container {
   transform: translateX(-200%);
+}
+
+#slide4:checked ~ .carousel-container {
+  transform: translateX(-315%);
+}
+
+#slide5:checked ~ .carousel-container {
+  transform: translateX(-415%);
+}
+
+#slide6:checked ~ .carousel-container {
+  transform: translateX(-515%);
 }
 
 /* Estilos dos Indicadores de navegação */
