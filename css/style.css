@@ -211,27 +211,27 @@ input[type="radio"] {
 
 /* Quando o radio button é selecionado, faz a transição */
 #slide1:checked ~ .carousel-container {
-  transform: translateX(-15%);
+  transform: translateX(0%);
 }
 
 #slide2:checked ~ .carousel-container {
-  transform: translateX(-130%);
+  transform: translateX(-100%);
 }
 
 #slide3:checked ~ .carousel-container {
-  transform: translateX(-215%);
+  transform: translateX(-200%);
 }
 
 #slide4:checked ~ .carousel-container {
-  transform: translateX(-315%);
+  transform: translateX(-300%);
 }
 
 #slide5:checked ~ .carousel-container {
-  transform: translateX(-415%);
+  transform: translateX(-400%);
 }
 
 #slide6:checked ~ .carousel-container {
-  transform: translateX(-515%);
+  transform: translateX(-500%);
 }
 
 /* Estilos dos Indicadores de navegação */
