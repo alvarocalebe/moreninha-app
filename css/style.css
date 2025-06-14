@@ -1,5 +1,5 @@
 *{
-  font-family: "Literata", serif;
+  font-family: "Roboto", sans-serif;
 }
 
 header {
@@ -33,37 +33,51 @@ header nav ul li a {
 }
 
 
-/* Estilo do título */
-h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #ffffff;
-}
-
-/* Estilo do formulário e dos inputs */
-#loginForm {
-    display: flex;
-    flex-direction: column;
-}
-
-.input-container {
-    margin-bottom: 15px;
-}
-
-input[type="text"], input[type="password"] {
+/* Estilo do formulário */
+#login {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 40px;
   width: 100%;
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #000000;
-  border-radius: 5px;
-  background-color: #f9f9f9;
-  color: black; /* Texto preto ao digitar */
+  max-width: 400px; /* Largura máxima do formulário */
+  box-sizing: border-box;
 }
 
-input[type="text"]:focus, input[type="password"]:focus {
-  border-color: #AC652D;
-  outline: none;
+/* Estilo para os títulos do formulário */
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: 'Literata', serif;
+  font-weight: 700;
 }
+
+/* Centralização dos containers de input */
+.input-container {
+  margin-bottom: 20px;
+}
+
+.input-container label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.input-container input {
+  width: 100%;  /* Faz os inputs ocuparem 100% da largura */
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.input-container input:focus {
+  outline: none;
+  border-color: #ff4081;
+}
+
 
 /* Estilo do botão */
 .btn-submit {
@@ -95,12 +109,12 @@ footer {
 }
 
 
-footer a {
+a {
   text-decoration: none; /* Remove o sublinhado */
   color: inherit;        /* Herda a cor do texto ao redor (o mesmo que o texto normal) */
 }
 
-footer a:hover {
+a:hover {
   text-decoration: underline; /* Opcional: Adiciona o sublinhado ao passar o mouse */
 }
 
@@ -118,7 +132,8 @@ body {
 
 .container {
   width: 100%;
-  max-width: 350px; /* Largura máxima da tabela (ajustável conforme necessidade) */
+  max-width: 350px; /* Largura máxima do container (ajustável conforme necessidade) */
+  margin: 0 auto;
 }
 
 /* Estilo do Carrossel */
@@ -133,6 +148,7 @@ body {
 .carousel-container {
   display: flex;
   transition: transform 0.5s ease-in-out;
+  width: 100%;
 }
 
 .carousel-item {
@@ -140,7 +156,8 @@ body {
   margin-right: 10px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start; /* Alinha o conteúdo ao topo */
+  height: 500px; /* Altura maior para permitir mais espaço para descrições */
 }
 
 /* Estilo Polaroid */
@@ -149,20 +166,30 @@ body {
   background-color: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
-  padding: 15px;
+  padding: 20px;
   text-align: center;
-  width: 100%;
+  width: 250px;  /* Largura fixa para garantir a consistência entre os itens */
+  height: 100%;   /* Altura do polaroid será igual à altura do item do carrossel */
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column; /* Organiza o conteúdo de forma vertical (imagem + texto) */
+  justify-content: space-between; /* Garante que o conteúdo ocupe todo o espaço disponível */
 }
 
 .polaroid img {
   width: 100%;
-  height: auto;
+  height: 300px; /* Altura fixa para as imagens */
+  object-fit: cover; /* Ajusta as imagens para cobrir completamente o espaço sem distorção */
   border-radius: 8px;
 }
 
 .caption {
-  margin-top: 10px;
+  margin-top: 10px; /* Espaçamento entre a imagem e o texto */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .description {
@@ -172,7 +199,7 @@ body {
 }
 
 .date {
-  font-size: 12px;
+  font-size: 14px; /* Aumentei o tamanho da fonte da data */
   color: #666;
 }
 
@@ -194,7 +221,7 @@ input[type="radio"] {
   transform: translateX(-200%);
 }
 
-/* Indicadores de navegação */
+/* Estilos dos Indicadores de navegação */
 .carousel-indicators {
   position: absolute;
   bottom: 10px;
@@ -202,6 +229,8 @@ input[type="radio"] {
   transform: translateX(-50%);
   display: flex;
   gap: 10px;
+  justify-content: center; /* Centraliza os indicadores horizontalmente */
+  align-items: center; /* Alinha os indicadores verticalmente */
 }
 
 .carousel-indicators label {
@@ -210,15 +239,32 @@ input[type="radio"] {
   border-radius: 50%;
   background-color: #ccc;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-indicators label:hover {
+  background-color:#AC652D; /* Altera a cor quando o indicador é hover */
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
   .container {
-      max-width: 90%;  /* Ajusta a largura para 90% da tela em dispositivos móveis */
+    max-width: 90%;  /* Ajusta a largura para 90% da tela em dispositivos móveis */
   }
 
   .polaroid p {
-      font-size: 20px; /* Ajusta o tamanho da fonte nas telas menores */
+    font-size: 14px; /* Ajusta o tamanho da fonte nas telas menores */
+  }
+
+  header {
+    font-size: 1.5rem;
+  }
+
+  #login {
+    padding: 30px;
+  }
+
+  .input-container input, .btn-submit {
+    font-size: 14px;
   }
 }
