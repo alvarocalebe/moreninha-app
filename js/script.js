@@ -5,7 +5,7 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
 
     // Verificação de login (aqui estamos usando um usuário fixo para exemplo)
     if (username === "estherzinha.moreninha" && password === "1005") {
-        alert("Bem-vinda, meu amor!");
+        alert("Bem-vinda, Moreninha!");
         window.location.href = "home.html";  // Redireciona para a página home
     } else {
         alert("Usuário ou senha inválidos!");
