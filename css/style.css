@@ -132,7 +132,7 @@ body {
 
 .container {
   width: 100%;
-  max-width: 500px; /* Largura máxima do container (ajustável conforme necessidade) */
+  max-width: 350px; /* Largura máxima do container (ajustável conforme necessidade) */
   margin: 0 auto;
 }
 
@@ -166,9 +166,9 @@ body {
   background-color: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
-  padding: 20px;
+  padding: 10px;
   text-align: center;
-  width: 250px;  /* Largura fixa para garantir a consistência entre os itens */
+  width: 300px;  /* Largura fixa para garantir a consistência entre os itens */
   height: 100%;   /* Altura do polaroid será igual à altura do item do carrossel */
   box-sizing: border-box;
   display: flex;
@@ -178,7 +178,7 @@ body {
 
 .polaroid img {
   width: 100%;
-  height: 300px; /* Altura fixa para as imagens */
+  height: 350px; /* Altura fixa para as imagens */
   object-fit: cover; /* Ajusta as imagens para cobrir completamente o espaço sem distorção */
   border-radius: 8px;
 }
@@ -223,6 +223,7 @@ input[type="radio"] {
 
 /* Estilos dos Indicadores de navegação */
 .carousel-indicators {
+  margin-top: 10px;
   position: absolute;
   bottom: 10px;
   left: 50%;
@@ -249,7 +250,7 @@ input[type="radio"] {
 /* Responsividade */
 @media (max-width: 768px) {
   .container {
-    max-width: 90%;  /* Ajusta a largura para 90% da tela em dispositivos móveis */
+    max-width: 100%;  /* Ajusta a largura para 90% da tela em dispositivos móveis */
   }
 
   .polaroid p {
