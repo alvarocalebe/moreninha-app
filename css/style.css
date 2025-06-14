@@ -199,8 +199,9 @@ body {
 }
 
 .date {
-  font-size: 14px; /* Aumentei o tamanho da fonte da data */
+  font-size: 14px;
   color: #666;
+  margin-bottom: 10px;
 }
 
 /* Esconde os inputs de tipo rádio */
@@ -223,15 +224,15 @@ input[type="radio"] {
 
 /* Estilos dos Indicadores de navegação */
 .carousel-indicators {
-  margin-top: 10px;
   position: absolute;
-  bottom: 10px;
+  bottom: 20px; /* Aumenta o espaçamento entre os indicadores e o carrossel */
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   gap: 10px;
   justify-content: center; /* Centraliza os indicadores horizontalmente */
   align-items: center; /* Alinha os indicadores verticalmente */
+
 }
 
 .carousel-indicators label {
