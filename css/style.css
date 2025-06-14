@@ -239,7 +239,7 @@ input[type="radio"] {
 }
 
 #slide8:checked ~ .carousel-container {
-  transform: translateX(-710%);
+  transform: translateX(-720%);
 }
 
 /* Estilos dos Indicadores de navegação */
