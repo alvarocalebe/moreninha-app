@@ -223,23 +223,23 @@ input[type="radio"] {
 }
 
 #slide4:checked ~ .carousel-container {
-  transform: translateX(-310%);
+  transform: translateX(-315%);
 }
 
 #slide5:checked ~ .carousel-container {
-  transform: translateX(-415%);
+  transform: translateX(-425%);
 }
 
 #slide6:checked ~ .carousel-container {
-  transform: translateX(-510%);
+  transform: translateX(-520%);
 }
 
 #slide7:checked ~ .carousel-container {
-  transform: translateX(-615%);
+  transform: translateX(-630%);
 }
 
 #slide8:checked ~ .carousel-container {
-  transform: translateX(-720%);
+  transform: translateX(-735%);
 }
 
 /* Estilos dos Indicadores de navegação */
