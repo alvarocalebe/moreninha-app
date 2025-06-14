@@ -132,7 +132,7 @@ body {
 
 .container {
   width: 100%;
-  max-width: 350px; /* Largura máxima do container (ajustável conforme necessidade) */
+  max-width: 500px; /* Largura máxima do container (ajustável conforme necessidade) */
   margin: 0 auto;
 }
 
