@@ -211,15 +211,15 @@ input[type="radio"] {
 
 /* Quando o radio button é selecionado, faz a transição */
 #slide1:checked ~ .carousel-container {
-  transform: translateX(0%);
+  transform: translateX(-15%);
 }
 
 #slide2:checked ~ .carousel-container {
-  transform: translateX(-100%);
+  transform: translateX(-130%);
 }
 
 #slide3:checked ~ .carousel-container {
-  transform: translateX(-200%);
+  transform: translateX(-215%);
 }
 
 #slide4:checked ~ .carousel-container {
