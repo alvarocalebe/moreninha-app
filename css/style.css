@@ -234,6 +234,14 @@ input[type="radio"] {
   transform: translateX(-500%);
 }
 
+#slide7:checked ~ .carousel-container {
+  transform: translateX(-600%);
+}
+
+#slide8:checked ~ .carousel-container {
+  transform: translateX(-700%);
+}
+
 /* Estilos dos Indicadores de navegação */
 .carousel-indicators {
   position: absolute;
