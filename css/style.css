@@ -223,23 +223,23 @@ input[type="radio"] {
 }
 
 #slide4:checked ~ .carousel-container {
-  transform: translateX(-315%);
+  transform: translateX(-300%);
 }
 
 #slide5:checked ~ .carousel-container {
-  transform: translateX(-425%);
+  transform: translateX(-400%);
 }
 
 #slide6:checked ~ .carousel-container {
-  transform: translateX(-520%);
+  transform: translateX(-500%);
 }
 
 #slide7:checked ~ .carousel-container {
-  transform: translateX(-630%);
+  transform: translateX(-600%);
 }
 
 #slide8:checked ~ .carousel-container {
-  transform: translateX(-735%);
+  transform: translateX(-700%);
 }
 
 /* Estilos dos Indicadores de navegação */
@@ -249,7 +249,7 @@ input[type="radio"] {
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  gap: 10px;
+  gap: 15px;
   justify-content: center; /* Centraliza os indicadores horizontalmente */
   align-items: center; /* Alinha os indicadores verticalmente */
 
